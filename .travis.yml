@@ -8,5 +8,5 @@ before_install:
 
 script:
   - sudo find / -type s
-  - docker exec -i mysql-socket mysql -u root -ptest123
+  - docker exec -it mysql-socket mysql -u root -ptest123
   - echo finished
