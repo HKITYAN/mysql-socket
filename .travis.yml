@@ -9,4 +9,6 @@ before_install:
 script:
   - sudo find / -type s
   - docker exec -i mysql-socket mysql -u root -ptest123 test < init.sql
-  - echo finished
+  - docker exec -i mysql-socket mysql -u root -ptest123
+  - use test;
+  - show tables;
