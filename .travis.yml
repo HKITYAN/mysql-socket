@@ -1,5 +1,6 @@
 sudo: required
 services:
+  # - mysql # do not add this line
   - docker
 
 before_install:
@@ -7,5 +8,5 @@ before_install:
 
 script:
   - sudo find / -type s
-  - docker exec -it mysql-socket mysql -u root -ptest123
+  - docker exec -it mysql-socket mysql -u root -ptest123 test < init.sql
   - echo finished
